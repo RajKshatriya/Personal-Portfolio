@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#FF4B4B',
+            'secondary': '#242424',
+            'background-dark': '#1A1A1A',
+            'text-light': '#FCF8F2',
+            'text-dark': '#1A1A1A'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <title>Raj Kshatriya - Aesthetic Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .form-input:focus {
+      box-shadow: 0 0 0 2px rgba(0, 173, 181, 0.5);
+    }
+  </style>
+</head>
+
+<body class="bg-background-dark text-text-light font-sans antialiased">
+
+  <nav
+    class="min-h-[4rem] bg-secondary flex items-center px-8 md:px-20 justify-between shadow-lg fixed top-0 left-0 right-0 z-50 py-4">
+    <h1
+      class="text-primary font-bold text-2xl tracking-wider hover:scale-[1.02] transition duration-300 cursor-pointer">
+      Raj Kshatriya
+    </h1>
+
+    <input type="checkbox" id="menu-toggle" class="peer hidden" />
+    <label for="menu-toggle"
+      class="md:hidden cursor-pointer p-2 rounded-lg text-primary hover:bg-primary/10 transition duration-300">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </label>
+
+    <div class="hidden md:flex flex-col md:flex-row gap-6 md:gap-8 absolute md:static top-full left-0 right-0 bg-secondary shadow-lg md:shadow-none p-4 md:p-0 transition-all duration-300 
+    peer-checked:flex peer-checked:flex-col md:peer-checked:flex-row">
+      <a href="#hero"
+        class="text-text-light hover:text-primary transition duration-300 font-medium relative group">Home</a>
+      <a href="#expertise"
+        class="text-text-light hover:text-primary transition duration-300 font-medium relative group">Expertise</a>
+      <a href="#projects"
+        class="text-text-light hover:text-primary transition duration-300 font-medium relative group">Projects</a>
+      <a href="#contact"
+        class="text-text-light hover:text-primary transition duration-300 font-medium relative group">Contact</a>
+    </div>
+  </nav>
+
+  <section id="hero"
+    class="relative min-h-screen flex items-center justify-start text-left p-8 md:p-32 overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center -z-50"
+      style="background-image: url('bg-img.jpg'); background-attachment: fixed;">
+    </div>
+
+    <div class="absolute inset-0 bg-background-dark opacity-[0.85]"></div>
+
+    <div class="relative z-10 text-white max-w-4xl">
+      <p class="text-lg text-primary font-light mb-4 uppercase tracking-[0.2em]">Hi, I'm</p>
+      <h1 class="text-5xl md:text-7xl font-bold mb-3 leading-tight text-text-light">
+        Raj Kshatriya
+      </h1>
+      <h2 class="text-2xl md:text-4xl font-light text-text-light/60 mb-10">
+        I craft clean, efficient web experiences.
+      </h2>
+      <p class="mt-8 text-xl max-w-xl text-text-light/70 font-light">
+        A <span class="text-primary">Full-Stack Developer</span> focused on minimalist design principles and writing
+        performant, high-quality code for impactful applications.
+      </p>
+      <a href="#projects"
+        class="inline-block mt-12 px-8 py-3 border-2 border-primary text-primary font-medium rounded-full hover:bg-primary hover:text-text-dark transition duration-300 text-lg tracking-wider">
+        View Projects
+      </a>
+    </div>
+  </section>
+
+  <section id="expertise" class="py-20 md:py-32 px-4 md:px-20 bg-background-dark border-t border-secondary">
+    <h2 class="text-3xl font-bold text-center mb-16 text-text-light tracking-wide">01. Expertise</h2>
+
+    <div class="w-16 h-1 bg-primary mx-auto mb-20 opacity-50"></div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+      <div
+        class="p-6 border border-secondary rounded-lg hover:border-primary transition duration-300 transform hover:-translate-y-1">
+        <div class="text-3xl text-primary mb-3"><i class="fas fa-desktop"></i></div>
+        <h3 class="text-xl font-semibold mb-3 text-text-light">Frontend</h3>
+        <p class="text-text-light/70 text-sm mb-4">Crafting aesthetic and responsive interfaces with a focus on UX.</p>
+        <ul class="space-y-1 text-sm text-primary/80 font-mono">
+          <li>React</li>
+          <li>Tailwind CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div
+        class="p-6 border border-secondary rounded-lg hover:border-primary transition duration-300 transform hover:-translate-y-1">
+        <div class="text-3xl text-primary mb-3"><i class="fas fa-code"></i></div>
+        <h3 class="text-xl font-semibold mb-3 text-text-light">Backend</h3>
+        <p class="text-text-light/70 text-sm mb-4">Building efficient and scalable server-side logic and APIs.</p>
+        <ul class="space-y-1 text-sm text-primary/80 font-mono">
+          <li>Python</li>
+        </ul>
+      </div>
+
+      <div
+        class="p-6 border border-secondary rounded-lg hover:border-primary transition duration-300 transform hover:-translate-y-1">
+        <div class="text-3xl text-primary mb-3"><i class="fas fa-tools"></i></div>
+        <h3 class="text-xl font-semibold mb-3 text-text-light">Tools & Data</h3>
+        <p class="text-text-light/70 text-sm mb-4">Handling persistent data and streamlining deployment workflows.</p>
+        <ul class="space-y-1 text-sm text-primary/80 font-mono">
+          <li>Git & Version Control</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects" class="py-16 md:py-32 px-4 md:px-20 bg-background-dark/80 border-t border-b border-secondary">
+    <h2 class="text-4xl font-bold text-center mb-16 text-primary tracking-wide">Featured Projects</h2>
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+      <div
+        class="bg-secondary rounded-xl shadow-2xl overflow-hidden border border-secondary hover:border-primary transition duration-500 group">
+        <img src="Coding-club.png" alt="Coding-club"
+          class="w-full h-70 object-cover group-hover:opacity-80 transition duration-500">
+        <div class="p-6">
+          <h3 class="text-3xl font-bold mb-2 text-primary">Coding club website</h3>
+          <p class="text-text-light/70 mb-4 text-base">A minimalist club website solution focusing on
+            smooth user flow.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/50">HTML</span>
+            <span
+              class="bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/50">CSS</span>
+            <span
+              class="bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/50">JS</span>
+          </div>
+          <a href="https://www.nktcodingclub.live/" target="_blank"
+            class="text-primary hover:text-text-light font-semibold transition duration-300 flex items-center group">
+            View Demo
+            <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition duration-300"></i>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="bg-secondary rounded-xl shadow-2xl overflow-hidden border border-secondary hover:border-primary transition duration-500 group">
+        <img src="FitTrack.png" alt="FitTrack"
+          class="w-full h-70 object-cover group-hover:opacity-80 transition duration-500"
+          src='https://via.placeholder.com/600x400/393E46/EEEEEE?text=Task+Manager+Project' ;>
+        <div class="p-6">
+          <h3 class="text-3xl font-bold mb-2 text-primary">FitTrack</h3>
+          <p class="text-text-light/70 mb-4 text-base">A clear, goal-driven view of daily steps, calories, and workout
+            activity.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              class="bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/50">HTML</span>
+            <span
+              class="bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/50">Tailwind
+              CSS</span>
+            <span
+              class="bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full border border-primary/50">JS</span>
+          </div>
+          <a href="https://fittrack-0rwp.onrender.com/" target="_blank"
+            class="text-primary hover:text-text-light font-semibold transition duration-300 flex items-center group">
+            View Demo
+            <i class="fas fa-arrow-right ml-2 text-sm group-hover:translate-x-1 transition duration-300"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-16">
+      <a href="#contact"
+        class="inline-block px-10 py-4 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-text-dark transition duration-300 text-lg tracking-wider">
+        Discuss Your Next Project
+      </a>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 md:py-32 px-4 md:px-20 bg-background-dark">
+    <h2 class="text-4xl font-bold text-center mb-6 text-primary tracking-wide">Get In Touch</h2>
+    <p class="text-center text-lg max-w-2xl mx-auto mb-12 text-text-light/70">
+      I'm currently open for new roles and collaborations. Send me an email and let's create something functional and
+      beautiful.
+    </p>
+
+    <div class="max-w-xl mx-auto bg-secondary p-8 md:p-12 rounded-xl shadow-2xl border border-secondary">
+      <form action="mailto:raj.kshatriya@example.com" method="POST" enctype="text/plain" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-text-light/80 mb-1">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name"
+            class="form-input mt-1 block w-full px-4 py-3 bg-background-dark border-2 border-secondary rounded-lg text-text-light focus:ring-primary focus:border-primary transition duration-300">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-text-light/80 mb-1">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com"
+            class="form-input mt-1 block w-full px-4 py-3 bg-background-dark border-2 border-secondary rounded-lg text-text-light focus:ring-primary focus:border-primary transition duration-300">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-text-light/80 mb-1">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+            class="form-input mt-1 block w-full px-4 py-3 bg-background-dark border-2 border-secondary rounded-lg text-text-light focus:ring-primary focus:border-primary transition duration-300"></textarea>
+        </div>
+        <div class="pt-4">
+          <button type="submit"
+            class="inline-block px-8 py-3 bg-primary text-text-dark font-bold rounded-lg hover:bg-primary/80 transition duration-300 shadow-xl w-full text-lg tracking-wider transform hover:scale-[1.01]">
+            Send Message
+          </button>
+        </div>
+      </form>
+
+      <div class="flex justify-center gap-8 mt-10 border-t border-secondary pt-6">
+        <a href="#" target="_blank" class="text-3xl text-text-light/60 hover:text-primary transition duration-300"
+          aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/RajKshatriya" target="_blank"
+          class="text-3xl text-text-light/60 hover:text-primary transition duration-300" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:rajkshatriya1960@gmail.com"
+          class="text-3xl text-text-light/60 hover:text-primary transition duration-300" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="text-center py-6 bg-secondary text-text-light/50 text-sm border-t border-background-dark">
+    &copy; 2025 Raj Kshatriya. Designed and built with clean HTML and Tailwind CSS.
+  </footer>
+</body>
+
+</html>
